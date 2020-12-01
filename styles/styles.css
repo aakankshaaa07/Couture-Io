@@ -1,0 +1,151 @@
+@font-face {
+  src: url("/kaiju/Kaiju.ttf") format("truetype");
+  font-family: "kaiju";
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: "Cosi Azure" !important;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-transform: uppercase !important;
+}
+
+@media screen and (min-width: 53em) {
+  .slider {
+    height: 100vh;
+  }
+}
+
+.rgbKineticSlider {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+nav a {
+  text-decoration: none;
+  position: absolute;
+  top: 46vh;
+  z-index: 1;
+  padding: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: black;
+  color: white;
+}
+
+nav a.next {
+  right: 10vw;
+}
+
+nav a.prev {
+  left: 10vw;
+}
+
+@media screen and (max-width: 53em) {
+  nav a {
+    top: auto;
+    bottom: 3rem;
+  }
+}
+
+.header-text {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-size: 70px;
+}
+
+.content {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
+
+.image {
+  width: 600px;
+  height: 600px;
+  margin-top: 50px;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+}
+
+.image:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.about-us, .life-of-a-party {
+  margin: 0 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "text image";
+}
+
+.text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+}
+
+.image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
+}
+
+.stay-in-fashion, .carefree-and-classy {
+  margin: 0 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "image text";
+}
+
+form {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #ffffff;
+  margin: 50px;
+  padding: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+input {
+  width: 40%;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#feedback {
+  height: 150px;
+  width: 40%;
+}
+/*# sourceMappingURL=styles.css.map */
